@@ -1,0 +1,879 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #2c3e50;
+    padding-top: 80px; 
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+
+/* Universal overflow prevention */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container utama */
+main {
+    overflow-x: hidden;
+}
+
+section {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    color: #2c3e50;
+    text-align: center;
+}
+
+h2 {
+    color: #34495e;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #e9ecef;
+}
+
+/* Header and Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 60px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hide hamburger menu on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.welcome {
+    text-align: center;
+    background: url('/assets/240_F_286464665_sDO2rTEWCJ7hegai5Z9BYCII6ZyDhUCP.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 578px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.text {
+    text-align: center;
+    padding: 40px 80px;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Message Us Section */
+.message-us {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.message-us h2 {
+    text-align: center;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+form[name="messageForm"] table, .form-output {
+    flex: 1;
+    min-width: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form container styling */
+form[name="messageForm"] {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+form[name="messageForm"] input[type="text"],
+form[name="messageForm"] input[type="date"],
+form[name="messageForm"] textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+form[name="messageForm"] input[type="text"]:focus,
+form[name="messageForm"] input[type="date"]:focus,
+form[name="messageForm"] textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+form[name="messageForm"] input[type="submit"] {
+    margin-top: 10px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+form[name="messageForm"] input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.form-output {
+    border: 2px solid #e9ecef;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-output span {
+    font-weight: normal;
+}
+
+
+/* Footer */
+footer {
+    padding: 30px 5%;
+    text-align: center;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ffffff;
+    margin-top: 40px;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+.footer-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific colors for each social media */
+.social-link:hover .fa-facebook-f {
+    color: #3b5998;
+}
+
+.social-link:hover .fa-twitter {
+    color: #1da1f2;
+}
+
+.social-link:hover .fa-instagram {
+    color: #e1306c;
+}
+
+.social-link:hover .fa-linkedin-in {
+    color: #0077b5;
+}
+
+.social-link:hover .fa-github {
+    color: #333;
+}
+
+.social-link:hover .fa-youtube {
+    color: #ff0000;
+}
+
+/* Tambahan styling untuk efek visual yang lebih menarik */
+main {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Animasi fade-in untuk section */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-us {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effect untuk form labels */
+form[name="messageForm"] label {
+    color: #34495e;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Radio button styling */
+form[name="messageForm"] input[type="radio"] {
+    accent-color: #667eea;
+    margin-right: 8px;
+}
+
+/* Table styling untuk form */
+form[name="messageForm"] table {
+    width: 100%;
+    min-width: 400px;
+    max-width: 600px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+form[name="messageForm"] td {
+    padding: 12px;
+    vertical-align: top;
+    width: 100%;
+}
+
+/* Profile Section */
+.profile {
+    padding: 60px 60px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.profile-card img {
+    width: 400px;
+    border-radius: 400px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.projects-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 350px;
+    max-width: 500px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.project-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-project {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+.btn-project:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar {
+        padding: 12px 3%;
+        width: 100%;
+        max-width: 100vw;
+        min-height: 55px;
+    }
+    
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hide nav-links by default on mobile */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100vw;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-radius: 0 0 10px 10px;
+        margin: 0;
+        gap: 0;
+    }
+    
+    .nav-links.active {
+        max-height: 300px;
+        padding: 20px 0;
+    }
+    
+    .nav-links li {
+        margin: 8px 0;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 0;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    }
+    
+    .nav-links a:hover {
+        background-color: rgba(255,255,255,0.3);
+        transform: none;
+    }
+    
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }.welcome {
+        text-align: center;
+        height: 500px;
+        background-position: center;
+        width: 100vw;
+        margin: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+    }.text {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        max-width: calc(100vw - 40px);
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100vw;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-radius: 0 0 10px 10px;
+        margin: 0;
+    }
+    
+    .nav-links.active {
+        max-height: 300px;
+        padding: 20px 0;
+    }
+    
+    .nav-links li {
+        margin: 8px 0;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 0;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+        background-color: rgba(255,255,255,0.3);
+        transform: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Perbaikan untuk hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Fix untuk navbar positioning */
+    .navbar {
+        box-sizing: border-box;
+    }
+    
+    .nav-links {
+        box-sizing: border-box;
+    }
+
+    .profile-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+    }    .form-wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    form[name="messageForm"] table, .form-output {
+        width: 100%;
+        max-width: calc(100vw - 20px);
+    }
+      /* Mobile responsive adjustments */
+    .headquarters, .message-us, .profile-details, .projects {
+        margin: 10px 2px;
+        padding: 30px 10px;
+        width: calc(100% - 4px);
+        max-width: calc(100vw - 10px);
+    }
+    
+    /* Projects mobile styling */
+    .projects-container {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+    
+    .project-card {
+        min-width: auto;
+        max-width: calc(100vw - 40px);
+        width: 100%;
+    }
+    
+    .project-info {
+        padding: 20px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-project {
+        text-align: center;
+        padding: 12px 20px;
+    }      /* Perbaikan untuk form elements */
+    form[name="messageForm"] {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+    
+    form[name="messageForm"] table, .form-output {
+        min-width: 280px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto;
+    }
+    
+    form[name="messageForm"] input[type="text"],
+    form[name="messageForm"] input[type="date"],
+    form[name="messageForm"] textarea {
+        width: calc(100% - 12px);
+    }/* Perbaikan untuk table form */
+    form[name="messageForm"] table {
+        width: 100% !important;
+        min-width: 300px !important;
+        max-width: 100% !important;
+        table-layout: fixed;
+        margin: 0 auto;
+    }
+    
+    form[name="messageForm"] td {
+        word-wrap: break-word;
+        padding: 8px;
+        width: 100%;
+    }
+      /* Perbaikan untuk submit button */
+    form[name="messageForm"] input[type="submit"] {
+        width: 100%;
+        max-width: 200px;
+        display: block;
+        margin: 15px auto 0 auto;
+        text-align: center;
+    }
+      /* Form output styling for mobile */
+    .form-output {
+        min-width: 280px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 20px auto 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    /* Footer mobile styling */
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .social-media {
+        gap: 12px;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+/* Tambahan untuk tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .locations {
+        gap: 60px;
+    }
+    
+    .text {
+        padding: 30px 60px;
+    }
+    
+    .welcome {
+        height: 500px;
+    }
+}
+
+/* Prevent horizontal scroll on all containers */
+.headquarters, .message-us, .profile-details, .welcome {
+    overflow-x: hidden;
+}
+
+/* Fix untuk nav-links overflow di mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    /* Perbaikan khusus untuk landscape mobile */
+    @media (orientation: landscape) and (max-height: 500px) {
+        .welcome {
+            height: 400px;
+        }
+        
+        .text {
+            padding: 15px;
+        }
+        
+        .nav-links.active {
+            max-height: 200px;
+        }
+    }
+}
+
+/* Final overflow fixes */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Ensure no element extends beyond viewport */
+.container, main, section, header, footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Fix for any potential margin/padding issues */
+@media (max-width: 768px) {
+    * {
+        max-width: 100vw;
+    }
+    
+    /* Reset any problematic margins */
+    .nav-links li {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Ensure images don't overflow */
+    .logo img {
+        max-width: 40px;
+        width: 40px;
+    }
+}
